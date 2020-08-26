@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
-      home: Home(),
-    ));
+void main() => runApp(
+      MaterialApp(
+        home: Home(),
+      ),
+    );
 
 class Home extends StatelessWidget {
   @override
@@ -15,16 +17,8 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[600],
       ),
       body: Center(
-        child: Text(
-          'hello ninjas',
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2.0,
-            color: Colors.grey[600],
-            fontFamily: 'IndieFlower',
-          ),
-        ),
+        child: Image.network(
+            'https://lh3.googleusercontent.com/proxy/DO7Ob_jZ_TeDrTURzWNN26XW9600gaVh2EIprxhxwZJKAJFSnFbmYgVl9iCQmPc8Sjf8YZpke-5RE75Ouww147Qqulk3sm9uBAFthagbAVJ57Xx-5HUe_l9LdK2EeQHC5mHbjVw'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
