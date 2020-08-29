@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'quote.dart';
 
 void main() => runApp(
       MaterialApp(
@@ -12,10 +13,20 @@ class QuoteList extends StatefulWidget {
 }
 
 class _QuoteListState extends State<QuoteList> {
-  List<String> quotes = [
-    'The wisest man follow their own direction.',
-    'Oh, I have sure slipped the surly bonds of Earth, put out my face and touched the face of God.',
-    'The man who moves a mountain begins by carrying away small stones.'
+  List<Quote> quotes = [
+    Quote(
+      author: 'Euripides',
+      text: 'The wisest man follow their own direction',
+    ),
+    Quote(
+      author: 'John Gillespie Magee, Jr.',
+      text:
+          'Oh, I have slipped the surly bonds of Earth, put out my face and touched the face of God',
+    ),
+    Quote(
+      author: 'Confucius',
+      text: 'The man who moves a mountain begins by carrying away small stones',
+    ),
   ];
 
   @override
@@ -30,7 +41,7 @@ class _QuoteListState extends State<QuoteList> {
       body: Column(
         children: quotes
             .map(
-              (quote) => Text(quote),
+              (quote) => Text('${quote.text} - ${quote.author}'),
             )
             .toList(),
       ),
